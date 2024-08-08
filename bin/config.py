@@ -6,14 +6,14 @@ import glob
 def parse_args():
     parser = argparse.ArgumentParser(description='Meta-Spe')
     
-    # Data settings
-    parser.add_argument('--microbe', type=str, default='/home/hdm/Meta-Spe/data/all-feature-predata.csv')
-    # parser.add_argument('--TCGA', type=str, default='/home/hdm/Meta-Spe/data/TCGA--Breast -- 1 vs all.csv')
+    # Data settings (Replaceable)
+    parser.add_argument('--microbe', type=str, default='../data/all-feature-predata.csv')
+    # parser.add_argument('--TCGA', type=str, default='../data/TCGA--Breast -- 1 vs all.csv')
     parser.add_argument('--host', type=str, default='')
-    # parser.add_argument('--testx', type=str, default='/home/hdm/Meta-Spe/data/breast-tumor vs nat-allfea.csv')
-    parser.add_argument('--test', type=str, default='/home/hdm/MCaPred/data/normal vs tumor/Breast -- tumor vs normal.csv')
-    # parser.add_argument('--testy', type=str, default='/home/hdm/Meta-Spe/data/breast-tumor vs nat-label.csv')
-    parser.add_argument('--label', type=str, default='/home/hdm/Meta-Spe/data/3879_label.csv')
+    # parser.add_argument('--testx', type=str, default='../data/breast-tumor vs nat-allfea.csv')
+    parser.add_argument('--test', type=str, default='../data/normal vs tumor/Breast -- tumor vs normal.csv')
+    # parser.add_argument('--testy', type=str, default='../data/breast-tumor vs nat-label.csv')
+    parser.add_argument('--label', type=str, default='../data/3879_label.csv') 
     parser.add_argument('--o', type=str, default='data')
     # Model settings
     parser.add_argument('--learning_rate', type=float, default=0.001, help='Learning rate for training')
