@@ -80,6 +80,7 @@ def get_msi(args, X_val, val_host,fold):
         if not os.path.exists(args.o + "/msi/"):
             os.makedirs(args.o + "/msi/")
         sta.to_csv(args.o + '/msi/' + target[i] + '_msi.csv', index=False)
+        # Replaceable
         sta.to_csv(args.o + '/msi/' + str(fold) + 'breast-fine- tumor vs normal' + '_msi.csv', index=False)
 
     if args.is_plot:
