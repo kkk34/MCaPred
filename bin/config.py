@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.model_selection import StratifiedKFold
 import glob
 def parse_args():
-    parser = argparse.ArgumentParser(description='Meta-Spe')
+    parser = argparse.ArgumentParser(description='MCaPred')
     
     # Data settings (Replaceable)
     parser.add_argument('--microbe', type=str, default='../data/all-feature-predata.csv')
