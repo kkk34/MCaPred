@@ -93,8 +93,10 @@ def main():
         fold_data = merged_df[['sampleid', 'prey_pred', 'prey_true', 'primary_site', 'Fold']]
         all_df.append(fold_data)
         print('all_df:', all_df)
-        # train_msi(args, X_train1, y_train1,  train_host1)
-        # get_msi(args, X_val1, val_host1, fold+1)
+        # To add Importance (MSI) 
+        train_msi(args, X_train1, y_train1,  train_host1)
+        # To calculate feature Importance
+        get_msi(args, X_val1, val_host1, fold+1)
     all_df = pd.concat(all_df, ignore_index=True)
     print(all_df)
     output_filename = os.path.splitext(os.path.basename(args.test))[0] + '_prediction.csv'
